@@ -1,0 +1,70 @@
+## Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+## NuGet Packages
+*.nupkg
+*.snupkg
+# NuGet client files
+*.aps
+*.Cache
+packages/
+# Never ignore the 'packages' folder in globbing, can be overridden by:
+# !packages/
+!packages/build/
+# Uncomment if necessary however generally it's better to restore packages via `dotnet restore` instead
+# !**/packages/*.nupkg
+
+## Visual Studio / VS Code / Rider
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.idea/
+
+## MSTest / Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+## Published-Application
+[Pp]ublish/
+*.[Pp]ublish.xml
+*.pubxml
+*.publishproj
+
+## Database files
+*.mdf
+*.ldf
+*.sqlite
+*.db
+
+## OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V105
+.Trashes
+ehthumbs.db
+Thumbs.db
