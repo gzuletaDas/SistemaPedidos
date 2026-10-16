@@ -1,0 +1,90 @@
+@host = http://localhost:5170
+
+### --- CLIENTES -------------------------------------------------
+
+### Listar todos
+GET {{host}}/api/Clientes
+
+### Obtener por id
+GET {{host}}/api/Clientes/1
+
+### Crear
+POST {{host}}/api/Clientes
+Content-Type: application/json
+
+{
+  "nombre": "Ana Perez",
+  "email": "ana@correo.cl"
+}
+
+### Actualizar
+PUT {{host}}/api/Clientes/1
+Content-Type: application/json
+
+{
+  "nombre": "Ana Perez Soto",
+  "email": "ana@correo.cl"
+}
+
+### Eliminar (borra en cascada sus pedidos)
+DELETE {{host}}/api/Clientes/1
+
+### --- PRODUCTOS ------------------------------------------------
+
+### Listar todos
+GET {{host}}/api/Productos
+
+### Crear
+POST {{host}}/api/Productos
+Content-Type: application/json
+
+{
+  "nombre": "Teclado",
+  "precio": 19990.50,
+  "stock": 10
+}
+
+### Actualizar
+PUT {{host}}/api/Productos/1
+Content-Type: application/json
+
+{
+  "nombre": "Teclado mecanico",
+  "precio": 29990,
+  "stock": 7
+}
+
+### Eliminar
+DELETE {{host}}/api/Productos/1
+
+### --- PEDIDOS --------------------------------------------------
+
+### Listar todos
+GET {{host}}/api/Pedidos
+
+### Obtener por id
+GET {{host}}/api/Pedidos/1
+
+### Pedidos de un cliente (relación 1:N)
+GET {{host}}/api/Pedidos/cliente/1
+
+### Crear (relación N:N con productos)
+POST {{host}}/api/Pedidos
+Content-Type: application/json
+
+{
+  "clienteId": 1,
+  "productoIds": [ 1, 2 ]
+}
+
+### Actualizar (reemplaza los productos del pedido)
+PUT {{host}}/api/Pedidos/1
+Content-Type: application/json
+
+{
+  "clienteId": 1,
+  "productoIds": [ 2 ]
+}
+
+### Eliminar
+DELETE {{host}}/api/Pedidos/1
